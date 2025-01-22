@@ -1,0 +1,32 @@
+/* @postcss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Dark mode transitions */
+.dark {
+  color-scheme: dark;
+  --toast-bg: #1f2937;
+  --toast-color: #f3f4f6;
+}
+
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 0ms;
+}
+
+:root {
+  --toast-bg: #ffffff;
+  --toast-color: #111827;
+}
